@@ -5,6 +5,6 @@ EXPOSE 40000 8080
 
 RUN go get github.com/derekparker/delve/cmd/dlv
 
-ADD main.go .
+ADD src/ .
 
 CMD [ "dlv", "debug", "--listen=:40000", "--headless=true", "--api-version=2", "--log" ]

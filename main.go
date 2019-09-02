@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func handle(w http.ResponseWriter, r *http.Request) {
@@ -21,5 +22,6 @@ func StartServer(port string, handlerFunc http.HandlerFunc) {
 }
 
 func main() {
-	StartServer("8080", handle)
+	port := os.Getenv("PORT")
+	StartServer(port, handle)
 }

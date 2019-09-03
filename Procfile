@@ -1,1 +1,1 @@
-web: bin/door-opener
+web: bin/sword-door-opener-api

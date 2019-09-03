@@ -3,6 +3,7 @@ services:
   api:
     environment:
       - PORT=8080
+      - "MOESIF_APPLICATION_ID=${MOESIF_APPLICATION_ID}"
     container_name: "api"
     build: "."
     volumes:
